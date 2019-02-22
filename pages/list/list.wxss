@@ -1,0 +1,40 @@
+/* pages/list.wxss */
+
+.day-item{
+  display:flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  height:150rpx;
+}
+
+
+.day-wrapper{
+  margin-left: 30rpx;
+}
+
+.day-day{
+  font-size: 40rpx;
+  line-height:56rpx;
+  opacity: 0.8;
+}
+
+.day-date{
+  font-size: 25rpx;
+  line-height: 35rpx;
+  opacity: 0.5;
+}
+
+.day-weather{
+  flex-grow: 1;
+  font-size: 40rpx;
+  line-height: 56rpx;
+  opacity: 0.8;
+  text-align: center;
+}
+
+.day-weathericon{
+  width: 90rpx;
+  height: 90rpx;
+  margin-right: 30rpx;
+}
+

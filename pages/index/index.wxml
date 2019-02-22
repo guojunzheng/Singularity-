@@ -1,0 +1,33 @@
+<view class="weather-wrapper">
+  <view class = 'locationWrapper' bindtap='onTapLocation'>
+    <view class = 'location'>
+      <image class ='location-icon' src = '/images/location-icon.png'></image>
+      <view class = 'location-text'>{{nowCity}}</view>
+    </view>
+    <view class = 'getLocation'>{{locationtips}}</view>
+  </view>
+  <view class="city">{{cityName}}</view>
+  <view class="temp">{{nowTemp}}</view>
+  <view class="weather">{{nowWeather}}</view>
+  <image class="weather-bg" src="{{nowWeatherBackground}}" mode="scaleToFill"></image>
+  <view class="today-weather" bindtap='onTapTodayWeather'>
+    <view class="today-date">{{todayDate}}  今天</view>
+    <view class="today-temp">{{todayRange}}</view>
+    <image class="today-arrow" src='/images/arrow.png'></image>
+  </view>
+</view>
+
+<view class="des">
+ <image class="des-icon" src="/images/time-icon.png"></image>
+ <view class="des-text">未来24小时天气预测</view>
+</view>
+
+<scroll-view scroll-x>
+  <view class="weatherForecast">
+    <view class="weather-arr" wx:for = "{{forecast}}">
+      <view class="weatherTime">{{item.time}}</view>
+      <image class="weatherIcon" src="{{item.iconPath}}"></image>
+      <view class="tempForecast">{{item.temp}}</view>
+    </view>
+  </view>
+</scroll-view>
